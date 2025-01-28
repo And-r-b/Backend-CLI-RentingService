@@ -5,13 +5,16 @@ class RentingService
 
     public RentingService()
     {
-        bookInventory = new Dictionary<Book, int>();
+        bookInventory = new Dictionary<Book, int>{ 
+            { new Book("Martian", "Jim"), 10 },
+            { new Book("Foundation", "Jack"), 30 },
+        };
         currentlyBorrowed = new Dictionary<Book, int>();
     }
 
-    public void ListAllBooks()
+    public Dictionary<Book, int> ListAllBooks()
     {
-        Console.WriteLine("Listing out books");
+        return bookInventory;
     }
 }
 
@@ -20,7 +23,7 @@ class Book
     public string Title;
     public string Author;
 
-    Book(string title, string author)
+    public Book(string title, string author)
     {
 
         Title = title;

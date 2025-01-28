@@ -13,7 +13,11 @@ if (input == null)
  switch (input)
  {
     case "list":
-        rentingService.ListAllBooks();
+        Dictionary<Book, int> availableBooks = rentingService.ListAllBooks();
+        foreach (var book in availableBooks)
+        {
+            Console.WriteLine(book.Key.Title);          
+        }
     break;
     case "borrow":
         Console.WriteLine("Borrowing book");
