@@ -10,7 +10,7 @@ class RentingService
             { new Book("Foundation", "Jack"), 30 },
         };
         currentlyBorrowed = new Dictionary<Book, int>{
-            { new Book("Martian", "Jim"), 10 },
+            { new Book("Martian", "Jim"), 2 },
             { new Book("Foundation", "Jack"), 30 },
         };
         
