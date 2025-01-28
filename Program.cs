@@ -20,7 +20,21 @@ if (input == null)
         }
     break;
     case "borrow":
-        Console.WriteLine("Borrowing book");
+        string? bookTitleInput = Console.ReadLine();
+        if (bookTitleInput == null)
+        {
+            Environment.Exit(1);
+        }
+        BorrowReceipt? receipt = rentingService.BorrowBook(bookTitleInput);
+
+        if (receipt == null) 
+        {
+            Console.WriteLine($"No books with title {bookTitleInput} available");
+        }
+        else
+        {
+            Console.WriteLine("Congratulations, book borrowed");
+        }
     break;
     case "return":
         Console.WriteLine("Returning book");
