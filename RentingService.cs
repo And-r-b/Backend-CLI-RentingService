@@ -40,7 +40,7 @@ class RentingService
 
         if (!isAvailable) 
         {
-            // Vi har ikke eskempler tilgjengelig
+            // Vi har ikke eksempler tilgjengelig
             return null;
         }
         else
